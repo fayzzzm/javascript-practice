@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="jquery.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="link.css">
+  <link rel="stylesheet" href="//unpkg.com/tachyons@4.9.0/css/tachyons.min.css">
+  <link rel="stylesheet" href="//unpkg.com/basscss-flexbox@1.0.1/index.css">
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="//unpkg.com/basscss-background-colors@2.1.0/index.css">
+  <link rel="stylesheet" href="unpkg.com/colors.css@3.0.0/css/colors.min.css">
+  <link rel="stylesheet" href="//unpkg.com/tachyons-spacing@4.0.0/css/tachyons-spacing.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <title></title>
+</head>
+
+<body>
+  <!-- There is our Menu -->
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/TOEFL_Logo.svg/2000px-TOEFL_Logo.svg.png" width="80px" alt=""></a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="show-button" type="button"><i class="fas fa-list-ol"></i></button>
+      <button class="btn btn-outline-success my-2 my-sm-0" id="added-button" type="button"><i class="fas fa-bookmark"></i></button>
+      <button class="btn btn-outline-success my-2 my-sm-0" id="fade-button" type="button"><i class="fas fa-bookmark"></i></button>
+
+    </form>
+  </nav>
+
+
+  <!-- hello -->
+  <div class="container">
+    <div class="box-container">
+
+    </div>
+    <main class="container phm mtm-ns">
+      <header class="mw7 center flex items-center db">
+        <div class="flex-auto db dib-ns">
+          <h1 class="mbn mega lh-title"><span class="thin">Word-Tittle</span><sup class="blue f5 normal">1</sup></h1>
+          <ul class="list pln gray mtn book">
+            <li class="di">verb </li><span class="di">&middot;</span>
+            <li class="di">de·sign </li><span class="di">&middot;</span>
+            <li class="di">\di-ˈzīn\</li>
+          </ul>
+        </div>
+        <div class="fr-ns db dib-ns tc mts-ns"><a class="blue dib phm ptm-ns pointer"><span class="f2 lh-solid db ion-ios-upload-outline"></span><span class="db">Share</span></a><a class="blue dib phm ptm-ns pointer"><span class="f2 lh-solid db ion-ios-star-outline"></span><span class="db" id="save" onclick="addWord()">Save</span></a>
+          <a class="blue dib phm ptm-ns pointer"><span class="f2 lh-solid db ion-ios-volume-high"></span><span class="db">Speak</span></a>
+        </div>
+      </header>
+      <article class="mw7 center">
+        <ul class="list mts mtm-ns pln lh-copy">
+          <li class="pt0 pbs pts-ns">to plan and make decisions about (something that is being built or created) : to create the plans, drawings, etc., that show how (something) will be made</li>
+          <li class="pvs">to plan and make (something) for a specific use or purpose</li>
+          <li class="pvs">to think of (something, such as a plan)</li>
+          <li class="pvs">to plan (something) in your mind</li>
+        </ul>
+      </article>
+      <section class="mw7 flex center dt-ns mtl pbxl lh-copy">
+        <div class="w-50-ns dtc-ns db prl mid-gray">
+          <h3 class="mtn">Origin</h3>
+          <p class="meaning-word">Middle English, to outline, indicate, mean, from Anglo-French & ME Latin; Anglo-French designer to designate, from ME Latin designare, from Latin, to mark out, from de- + signare to mark</p>
+          <p class="mbn">First Known Use: 14th century</p>
+        </div>
+        <div class="w-50-ns dtc-ns db mid-gray">
+          <h3 class="mtn">Examples</h3>
+          <ul class="pll mvn"></ul>
+          <li>A team of engineers <em>designed</em> the new engine.</li>
+          <li>Who <em>designed</em> the book&apos;s cover?</li>
+          <li>He <em>designed</em> the chair to adjust automatically.</li>
+          <li>They thought they could <em>design</em> the perfect crime.</li>
+          <li><em>design</em> a strategy for battle</li>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>

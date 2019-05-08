@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="calc.css">
+    <title>Hello Calculator</title>
+  </head>
+  <body>
+      <div id="app" class="container">
+          <div class="display" @click="eraseNumber" >
+               <input type="text" disabled :class="{ active : isActive }" v-model="no">
+          </div>
+          <div class="button">
+            <div class="inner_buttons">
+                 <span @click="operationNumber('/')" class="operations">/</span>
+                 <span @click="operationNumber('%')" class="top">%</span>
+                 <span @click="no = (parseInt(no) > 0 ? -no : -no)" class="top">+/-</span>
+                 <span @click="no = 0" class="top">AC</span>
+            </div>
+            <div class="inner_buttons">
+                 <span @click="operationNumber('*')" class="operations">*</span>
+                 <span @click="addNumbers('9')">9</span>
+                 <span @click="addNumbers('8')">8</span>
+                 <span @click="addNumbers('7')">7</span>
+            </div>
+            <div class="inner_buttons">
+                 <span @click="operationNumber('-')" class="operations">-</span>
+                 <span @click="addNumbers('6')">6</span>
+                 <span @click="addNumbers('5')">5</span>
+                 <span @click="addNumbers('4')">4</span>
+            </div>
+            <div class="inner_buttons">
+                 <span @click="operationNumber('+')" class="operations">+</span>
+                 <span @click="addNumbers('3')">3</span>
+                 <span @click="addNumbers('2')">2</span>
+                 <span @click="addNumbers('1')">1</span>
+            </div>
+            <div class="inner_buttons">
+                 <span @click="operationNumber('=')" class="operations">=</span>
+                 <span @click="addNumbers('.')">.</span>
+                 <span @click="addNumbers('0')" class="zero">0</span>
+            </div>
+          </div>
+      </div>
+      <script src="xxx.js"></script>
+  </body>
+</html>

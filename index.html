@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!--   <input type="text"  autofocus> -->
+  <div class="container" id="app">
+    <header>
+      <input type="text" v-model="filter" placeholder="search">
+    </header>
+
+    <main>
+<!--       <div class="information-container" @click="close" v-if="show">
+         <div class="information">
+            <div class="view">
+              <h1>{{ poet.name }}</h1>
+              <span>{{ poet.birth }} - {{ poet.die }}</span>
+
+              <img v-bind:src="poet.img" alt="">
+            </div>
+            <div class="bio special">
+              <div> Биография </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="bio">
+              <div> Произведения </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="bio">
+              <div> Литература </div>
+              <p>Lorem ipsum dolor sit amet.!</p>
+            </div>
+         </div>
+
+      </div>
+ -->
+      <div class="informative-container">
+        <span>{{ poets.length }} Поэты Серебряного Века</span>
+        <div class="poets">
+            <section v-for="(poet, index) in getPoets" @click="showInfo(index)">
+              <div><img v-bind:src="poet.img" alt=""></div>
+              <h3>{{ poet.name }}</h3>
+              <span>{{ poet.birth }} - {{ poet.die }}</span>
+            </section>
+            <section>
+              <div><button>Добавить Поэта</button></div>
+              <h3></h3>
+              <span></span>
+            </section>
+        </div>
+      </div>
+
+    </main>
+
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

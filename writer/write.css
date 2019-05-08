@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+body {background: #1C2331;}
+#window {
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+}
+#line {
+    width: 3px;
+    height: 140px;
+    position: relative;
+    margin-left: -8px;
+    top: 2px;
+    background-color: #fff;
+    -webkit-transition: 1s ease;
+            transition: 1s ease;
+}
+i {
+  color: #fb3232;
+  font-size: 120px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease
+}
+
+span {margin-left: 20px;display: inline-block;;}
+#line {left: 10px;}
+#city {text-transform: uppercase;}
+#me, #city, i {font-size: 170px;}
+#me, #city {color: #FFF;font-family: 'Open Sans', sans-serif;}
+#city, #line {display: inline-block;}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+* {
+    -webkit-transition: all 0.04s ease-in-out;
+            transition: all 0.04s ease-in-out;
+}
+body {
+    margin: 0;
+}
+.container {
+    width: 1360px;
+    height: 660px;
+    background-image: url('../images/background.jpg');
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+#bird {
+    position: absolute;
+    background-image: url('../images/flippy_nor.png');
+    height: 52px;
+    width: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 20%;
+    left: 15%;
+}
+#grass {
+    position: absolute;
+    bottom: 70px;
+    background-image: url('../images/ground.png');
+    background-repeat: repeat-x;
+    /* background-size: contain; */
+    z-index: 999;
+    width: 1500px;
+    height: 30px;
+}
+.block {
+    position: absolute;
+    height: 220px;
+    width: 105px;
+    background-image: url('../images/block.png');
+
+    right: -50px;
+}
+
+.result {
+    text-align: center;
+    boder: 1px solid black;
+}
+.buttons {
+    position: relative;
+    margin: 10px;
+    float: right;
+}
+#block_top {
+    top: 0;
+    /* transform: rotate(180deg); */
+    border-bottom: 8px solid black;
+}
+
+#block_bottom {
+    bottom: 80px;
+    border-top: 8px solid black;
+}
+p {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 999;
+    color: #fff;
+}
+p:nth-child(1) {
+    top: 30px;
+}
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    background: #ff4444;
+    color: #fff;
+    border: 3px solid #fff;
+}
